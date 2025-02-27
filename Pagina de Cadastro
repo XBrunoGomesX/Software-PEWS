@@ -1,5 +1,4 @@
-Aqui está o código em html da página de cadastro:
-
+**PÁGINA DE CADASTRO:**
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -40,7 +39,7 @@ Aqui está o código em html da página de cadastro:
         </form>
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
