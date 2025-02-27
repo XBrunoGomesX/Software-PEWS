@@ -1,11 +1,9 @@
 # Software PEWS
 
 ## Descrição 
-O objetivo desse projeto é criar o PEWS além da tela do figma, adicionando algumas ferramentas para ele e tornado um tanto funcional.
+O objetivo desse projeto é criar um site para o PEWS.
 ## Ferramentas e linguagens que serão utilizadas
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![Node.js](https://img.shields.io/badge/Node.js-green?logo=node.js&logoColor=white)![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white)![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker&logoColor=white)
-
-Link do PEWS no figma: https://www.figma.com/design/W169kvKMR7XrLJrMnfyNQI/Protótipo-Página-Web?node-id=0-1&p=f&t=jRAJIsvcxJfn2YBI-0 
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![Node.js](https://img.shields.io/badge/Node.js-green?logo=node.js&logoColor=white)
 
 ### O que é o PEWS?
 È um sistema de pontuação utilizado para avaliar e monitorar o estado clínico de crianças hospitalizadas. Ele ajuda a identificar precocemente sinais de deterioração, permitindo que a equipe médica intervenha rapidamente.
