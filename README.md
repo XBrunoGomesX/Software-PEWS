@@ -3,7 +3,7 @@
 ## Descrição 
 O objetivo desse projeto é criar o PEWS além da tela do figma, adicionando algumas ferramentas para ele e tornado um tanto funcional.
 ## Ferramentas e linguagens que serão utilizadas
-![image](https://github.com/user-attachments/assets/e91319e3-1237-44f2-9a4b-be88bcd1d22d)![image](https://github.com/user-attachments/assets/1d07b6d9-277b-4613-b71b-78b21a30cf47)![image](https://github.com/user-attachments/assets/d46e69ad-e4cb-4089-8761-6bd66b3eb10c)![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)![Node.js](https://img.shields.io/badge/Node.js-green?logo=node.js&logoColor=white)![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white)![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![Node.js](https://img.shields.io/badge/Node.js-green?logo=node.js&logoColor=white)![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white)![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker&logoColor=white)
 
 Link do PEWS no figma: https://www.figma.com/design/W169kvKMR7XrLJrMnfyNQI/Protótipo-Página-Web?node-id=0-1&p=f&t=jRAJIsvcxJfn2YBI-0 
 
