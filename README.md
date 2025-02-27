@@ -57,6 +57,34 @@ git push origin minha-nova-funcionalidade
   - Passos para reproduzir (se aplicável).
   - Logs, mensagens de erro ou capturas de tela relevantes.
 
+# Como Rodar o site
+1. Passo
+
+    Baixe o arquivo Site_PEWS
+
+3. Passo
+
+   Abra a pasta no Visual Studio Code
+
+4. Passo
+
+   No terminal va até a pasta "site" usando codigo
+   
+    ```
+    cd (tab)
+    ```
+
+5. Passo
+
+   Use o código abaixo para iniciar o server
+
+   ```
+   node server.js
+   ```
+6. Passo
+
+   Abra o arquivo "<>pagina_do_login.html" clicando com o botão esquerdo e indo na opção "Open with Live Server" (é necessario ter baixado o plugin Live server) e **pronto**.
+
 # Contribuintes
 | Nome   | Github  |
 |--------|---------------|
