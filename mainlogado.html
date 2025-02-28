@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PewS - Pediatric Early Warning Score</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-box {
+            background-color: #166534;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+        }
+        
+        .logo-plus {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo-text {
+            color: #166534;
+            font-size: 1.875rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #4b5563;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .dropdown-button::after {
+            content: '▼';
+            font-size: 0.7rem;
+            margin-left: 0.25rem;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0.375rem;
+            z-index: 1000;
+            right: 0;
+            margin-top: 0.5rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-content ul {
+            list-style: none;
+            padding: 0.25rem 0;
+        }
+        
+        .dropdown-content li {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            text-align: left;
+        }
+        
+        .dropdown-content li:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .user-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: #e5e7eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        /* Main content styles */
+        main {
+            margin-bottom: 3rem;
+        }
+        
+        .section {
+            background-color: #1f2937;
+            margin: 0 auto;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            margin-bottom: 3rem;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-text {
+            padding: 2.5rem;
+            text-align: left;
+        }
+        
+        .section-text p {
+            color: #d4bc80;
+            font-size: 1.125rem;
+        }
+        
+        .section-image {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .section.reversed {
+            grid-template-columns: 2fr 3fr;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: white;
+            padding: 1.5rem;
+            text-align: center;
+            color: #4b5563;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 3rem;
+        }
+        
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .section,
+            .section.reversed {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-image {
+                min-height: 15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-box">
+                    <div class="logo-plus">+</div>
+                </div>
+                <span class="logo-text">PewS</span>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="comousar.html">Como Usar</a>
+                <a href="medico.html">Médico</a>
+                <a href="triagem.html">Triagem</a>
+                <div class="dropdown">
+                    <button class="dropdown-button">Hospitais</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>VitalMed Centro de Saúde - (V.M.C.S)</li>
+                            <li>Centro Médico Vida Plena - (C.M.V.P)</li>
+                            <li>Saúde Center - (S.C)</li>
+                            <li>Multicare Hospital - (M.H)</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="user-icon">👤</div>
+        </div>
+    </header>
+    
+    <main>
+        <div style="margin-top: 3rem;"></div>
+        
+        <section class="section">
+            <div class="section-text">
+                <p>
+                    O PEWS (Pediatric Early Warning Score ou Pediatric Early Warning System) é uma 
+                    ferramenta clínica desenvolvida para identificar precocemente sinais de 
+                    deterioração em crianças hospitalizadas. Seu objetivo principal é auxiliar as 
+                    equipes médicas na detecção de alterações no estado de saúde do paciente antes 
+                    que ele evolua para uma situação crítica, como uma parada cardiorrespiratória.
+                </p>
+            </div>
+            <div class="section-image">
+                <img src="PNG/criança.png" alt="Crianças">
+            </div>
+        </section>
+        
+        <section class="section reversed">
+            <div class="section-image">
+                <img src="https://images.unsplash.com/photo-1588117305388-c2631a279f82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Criança feliz">
+            </div>
+            <div class="section-text">
+                <p>
+                    O sistema é baseado na avaliação de três áreas fundamentais: respiratória, 
+                    cardiovascular e comportamental. A área respiratória inclui aspectos como a 
+                    frequência respiratória, o esforço para respirar e a necessidade de suporte 
+                    ventilatório. Na área cardiovascular, avaliam-se a frequência cardíaca, a 
+                    perfusão periférica, a coloração da pele e a pressão arterial. Já na área 
+                    comportamental, considera-se o nível de consciência da criança, sua 
+                    irritabilidade e a capacidade de responder ao ambiente.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        Suporte
+    </footer>
+    <script>
+        // Simple JavaScript for mobile menu (if needed later)
+        document.addEventListener('DOMContentLoaded', function() {
+            // This is where you can add JavaScript functionality if needed
+        });
+    </script>
+</body>
+</html>
