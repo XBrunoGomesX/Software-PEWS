@@ -3,7 +3,7 @@
 ## Descrição 
 O objetivo desse projeto é criar o PEWS além da tela do figma, adicionando algumas ferramentas para ele e tornado um tanto funcional.
 ## Ferramentas e linguagens que serão utilizadas
-![image](https://github.com/user-attachments/assets/e91319e3-1237-44f2-9a4b-be88bcd1d22d)![image](https://github.com/user-attachments/assets/1d07b6d9-277b-4613-b71b-78b21a30cf47)![image](https://github.com/user-attachments/assets/d46e69ad-e4cb-4089-8761-6bd66b3eb10c)![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)![Node.js](https://img.shields.io/badge/Node.js-green?logo=node.js&logoColor=white)![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white)![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white&style=flat)![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white&style=flat)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=white&style=flat)![Node.js](https://img.shields.io/badge/Node.js-green?logo=node.js&logoColor=white)![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker&logoColor=white)
 
 Link do PEWS no figma: https://www.figma.com/design/W169kvKMR7XrLJrMnfyNQI/Protótipo-Página-Web?node-id=0-1&p=f&t=jRAJIsvcxJfn2YBI-0 
 
@@ -58,6 +58,31 @@ git push origin minha-nova-funcionalidade
   - Qual é o problema ou sugestão?
   - Passos para reproduzir (se aplicável).
   - Logs, mensagens de erro ou capturas de tela relevantes.
+
+# Como rodar o site?
+1. Passo
+
+   Baixar as pastas e arquivos sem **alterar em nada!**
+
+2. Passo
+
+   Baixar o PostgresSQL(caso não tenha) e criar a tabela especificada no arquivo **sintax BD**
+
+3. Passo
+
+   Abrir a pasta com os arquivos no vscode e o terminal na pasta correta.
+
+4. Passo
+
+   Rodar o código:
+
+   ```
+   node server.js
+   ```
+
+5. Passo
+
+   Abrir o arquivo **"<>cadastro.html"** clicando com o botão direito nele e selecionado a opção **"Open with Live Server"**
 
 # Contribuintes
 | Nome   | Github  |
