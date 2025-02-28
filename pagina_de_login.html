@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-        
+
         body {
             font-family: 'JetBrains Mono', monospace;
             background-color: #f8f9fa;
@@ -24,50 +24,24 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 70px; /* Aumentei o padding lateral para dar mais espaçamento */
+            padding: 0 70px;
             background-color: #ffffff;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        }
-        .logo {
-            display: flex;
-            align-items: center;
         }
         .logo img {
             height: 50px;
             padding: 5px 30px;
         }
-        .logo span {
-            color: #106308;
-            font-weight: bold;
-            font-size: 24px;
-            margin-left: 10px;
-        }
         .nav-buttons {
             display: flex;
             align-items: center;
-            gap: 25px; /* Espaçamento entre os botões */
-            padding-right: 30px; /* Afastando a navegação da borda direita */
-        }
-        .nav-button {
-            text-decoration: none; /* Remove o sublinhado dos links */
-            padding: 10px 15px; /* Espaçamento interno */
-            background-color: transparent; /* Fundo transparente */
-            color: #333; /* Cor do texto */
-            transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
-        }
-        .nav-buttons a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            padding: 10px 15px;
+            gap: 25px;
+            padding-right: 30px;
         }
         .login-button {
             background-color: #106308;
             color: #ffffff !important;
             border: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
@@ -75,12 +49,8 @@
             transition: background-color 0.3s;
         }
         .login-button:hover {
-            background-color: #0d4f06; /* Cor de fundo ao passar o mouse */
+            background-color: #0d4f06;
         }
-        .login-button::after {
-            content: '\1F512'; /* Unicode para cadeado */
-            font-size: 16px;
-        }   
         .login-container {
             text-align: center;
             margin-top: 180px;
@@ -128,56 +98,6 @@
         .links a:hover {
             text-decoration: underline;
         }
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-
-        .support-button {
-            position: fixed; /* Torna o botão fixo na tela */
-            bottom: 20px; /* Distância do fundo */
-            left: 50%; /* Centraliza horizontalmente */
-            transform: translateX(-50%); /* Ajusta para que o botão fique centralizado */
-            font-size: 16px;
-            text-decoration: none;
-            color: #333;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .support-button:hover {
-            text-decoration: underline;
-        }
-        .hospital-list {
-            display: none; /* Oculta a lista por padrão */
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            position: absolute; /* Mantém a lista em relação ao botão */
-            z-index: 1000;
-            width: 150px; /* Largura da lista */
-            top: 100%; /* Posiciona a lista logo abaixo do botão */
-            left: 84%; /* Alinha ao centro */
-            transform: translateX(-50%); /* Centraliza a lista horizontalmente */
-        }
-        .hospital-list ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px;
-        }
-        .hospital-list li {
-            padding: 10px;
-            cursor: pointer;
-        }
-        .hospital-list li:hover {
-            background-color: #f0f0f0; /* Muda a cor ao passar o mouse */
-        }
     </style>
 </head>
 <body>
@@ -186,54 +106,44 @@
             <img src="PNG/logo.png" alt="Logo">
         </a>
         <nav class="nav-buttons">
-            <div class="hospital-button" onclick="toggleHospitalList()">Hospitais+</div>
-            <div class="hospital-list" id="hospitalList">
-                <ul>
-                    <li>VitalMed Centro de Saúde - 
-                        (V.M.C.S) </li>
-                    <li>Centro Médico Vida Plena -(C.M.V.P)</li>
-                    <li>Saúde Center - (S.C)</li>
-                    <li>Multicare Hospital - (M.H)</li>
-                </ul>
-            </div>  
             <a href="pagina_de_login.html" class="login-button">Login</a>
         </nav>
     </header>
+
     <main class="login-container">
         <h2>Efetue seu Login</h2>
         <div class="input-container">
-            <input type="text" placeholder="Identificador">
-            <input type="password" placeholder="Senha">
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="password" id="senha" placeholder="Senha">
         </div>
-        <a href="mainlogado.html">
-            <button class="login-btn">Acessar</button>
-        </a>
-        <div class="links">
-            <p>Esqueceu sua senha? <a href="#">Clique Aqui</a></p>
-            <p>Ainda não possui cadastro? <a href="cadastro.html">Clique Aqui</a></p>
-        </div>
+        <button class="login-btn" onclick="fazerLogin()">Acessar</button>
     </main>
 
     <script>
-        function toggleHospitalList() {
-            const hospitalList = document.getElementById('hospitalList');
-            if (hospitalList.style.display === 'none' || hospitalList.style.display === '') {
-                hospitalList.style.display = 'block'; // Mostra a lista
-            } else {
-                hospitalList.style.display = 'none'; // Oculta a lista
-            }
-        }
+        async function fazerLogin() {
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
 
-        // Ocultar a lista ao clicar fora dela
-        window.onclick = function(event) {
-            const hospitalList = document.getElementById('hospitalList');
-            if (!event.target.matches('.hospital-button') && !event.target.matches('.hospital-list') && !event.target.closest('.hospital-list')) {
-                hospitalList.style.display = 'none';
+            if (!email || !senha) {
+                alert("Preencha todos os campos!");
+                return;
+            }
+
+            try {
+                const resposta = await fetch("http://localhost:3000/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, senha })
+                });
+
+                const dados = await resposta.json();
+
+                alert(dados.message);
+                if (resposta.ok) window.location.href = "mainlogado.html";
+            } catch (error) {
+                alert("Erro ao conectar ao servidor.");
             }
         }
     </script>
-    <footer>
-        <button class="support-button">Suporte</button>
-    </footer>
 </body>
 </html>
