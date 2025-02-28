@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PewS Healthcare System</title>
+    <link rel="stylesheet" href="medicostyles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header/Navigation -->
+      <header class="header">
+        <div class="header-content">
+          <div class="logo-container">
+            <div class="logo">
+              <span>+</span>
+            </div>
+            <div class="logo-text">PewS</div>
+          </div>
+          <nav class="navigation">
+            <a href="comousar.html" class="nav-link">Como Usar</a>
+            <a href="medico.html" class="nav-link">Médico</a>
+            <a href="triagem.html" class="nav-link">Triagem</a>
+            <div class="dropdown">
+              <button class="dropdown-button hospital-button" onclick="toggleHospitalList()">
+                Hospitais
+                <svg
+                  class="dropdown-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="hospitalList" class="hospital-list">
+                <a href="#" class="hospital-item">VitalMed Centro de Saúde - 
+                    (V.M.C.S)</a>
+                <a href="#" class="hospital-item">Centro Médico Vida Plena -(C.M.V.P)</a>
+                <a href="#" class="hospital-item">Saúde Center - (S.C)</a>
+                <a href="#" class="hospital-item">Multicare Hospital - (M.H)</a>
+              </div>
+            </div>
+          </nav>
+          <div class="user-icon">
+            <div class="icon-circle">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1 class="page-title">Lista de Pacientes em Espera</h1>
+
+        <div class="grid-container">
+          <!-- Left Column - Patient Cards -->
+          <div class="patient-list">
+            <!-- Patient 3 -->
+            <div class="patient-card">
+              <div class="patient-info">
+                <h2 class="patient-name">Paciente 3</h2>
+                <div class="patient-details">
+                  <p class="detail-line">
+                    <span class="detail-label">Nome do Paciente:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Idade:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Laudo Atual:</span>
+                    <span class="detail-value">Triagem do Paciente</span>
+                  </p>
+                </div>
+              </div>
+              <div class="score-container">
+                <div class="score-label">SCORE</div>
+                <div class="score score-red">5</div>
+              </div>
+            </div>
+
+            <!-- Patient 2 -->
+            <div class="patient-card">
+              <div class="patient-info">
+                <h2 class="patient-name">Paciente 2</h2>
+                <div class="patient-details">
+                  <p class="detail-line">
+                    <span class="detail-label">Nome do Paciente:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Idade:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Laudo Atual:</span>
+                    <span class="detail-value">Triagem do Paciente</span>
+                  </p>
+                </div>
+              </div>
+              <div class="score-container">
+                <div class="score-label">SCORE</div>
+                <div class="score score-orange">4</div>
+              </div>
+            </div>
+
+            <!-- Patient 1 -->
+            <div class="patient-card">
+              <div class="patient-info">
+                <h2 class="patient-name">Paciente 1</h2>
+                <div class="patient-details">
+                  <p class="detail-line">
+                    <span class="detail-label">Nome do Paciente:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Idade:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Laudo Atual:</span>
+                    <span class="detail-value">Triagem do Paciente</span>
+                  </p>
+                </div>
+              </div>
+              <div class="score-container">
+                <div class="score-label">SCORE</div>
+                <div class="score score-yellow">2</div>
+              </div>
+            </div>
+
+            <!-- Patient 4 -->
+            <div class="patient-card">
+              <div class="patient-info">
+                <h2 class="patient-name">Paciente 4</h2>
+                <div class="patient-details">
+                  <p class="detail-line">
+                    <span class="detail-label">Nome do Paciente:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Idade:</span>
+                  </p>
+                  <p class="detail-line">
+                    <span class="detail-label">Laudo Atual:</span>
+                    <span class="detail-value">Triagem do Paciente</span>
+                  </p>
+                </div>
+              </div>
+              <div class="score-container">
+                <div class="score-label">SCORE</div>
+                <div class="score score-green">0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - Info Cards -->
+          <div class="info-cards">
+            <!-- Médico Card -->
+            <div class="info-card">
+              <h2 class="card-title">Médico</h2>
+              <div class="card-details">
+                <p class="detail-line">
+                  <span class="detail-label">Nome do Médico:</span>
+                </p>
+                <p class="detail-line">
+                  <span class="detail-label">Período:</span>
+                </p>
+                <p class="detail-line">
+                  <span class="detail-label">Hospital:</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Responsável na Triagem Card -->
+            <div class="info-card">
+              <h2 class="card-title">Responsável na Triagem</h2>
+              <div class="card-details">
+                <p class="detail-line">
+                  <span class="detail-label">Nome do Enfermeiro(a):</span>
+                </p>
+                <p class="detail-line">
+                  <span class="detail-label">Período:</span>
+                </p>
+                <p class="detail-line">
+                  <span class="detail-label">Hospital:</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Suporte</p>
+      </footer>
+    </div>
+
+    <script>
+        function toggleHospitalList() {
+            const hospitalList = document.getElementById('hospitalList');
+            if (hospitalList.style.display === 'none' || hospitalList.style.display === '') {
+                hospitalList.style.display = 'block'; // Mostra a lista
+            } else {
+                hospitalList.style.display = 'none'; // Oculta a lista
+            }
+        }
+
+        // Ocultar a lista ao clicar fora dela
+        window.onclick = function(event) {
+            const hospitalList = document.getElementById('hospitalList');
+            if (!event.target.matches('.hospital-button') && !event.target.matches('.hospital-list') && !event.target.closest('.hospital-list')) {
+                hospitalList.style.display = 'none';
+            }
+        }
+    </script>
+  </body>
+</html>
